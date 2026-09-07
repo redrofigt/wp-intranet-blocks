@@ -1,0 +1,102 @@
+/*
+ * Intranet Blocks — front-end styles.
+ *
+ * Written with CSS logical properties (margin-inline-start, padding-block, etc.)
+ * so the same stylesheet renders correctly in LTR (English) and RTL (Arabic)
+ * without a separate RTL build.
+ */
+
+.nh-news {
+	display: grid;
+	gap: var(--wp--style--block-gap, 1.25rem);
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.nh-news--list {
+	grid-template-columns: 1fr;
+}
+
+.nh-news--featured .nh-news__card:first-child {
+	grid-column: 1 / -1;
+}
+
+.nh-news__card {
+	background: var(--wp--preset--color--base, #fff);
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 12px;
+	overflow: hidden;
+	transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.nh-news__card:hover {
+	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+	transform: translateY(-2px);
+}
+
+.nh-news__link {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	height: 100%;
+}
+
+.nh-news__link img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	display: block;
+}
+
+.nh-news__body {
+	padding-block: 0.9rem;
+	padding-inline: 1.1rem;
+	display: grid;
+	gap: 0.4rem;
+}
+
+.nh-news__title {
+	font-size: 1.05rem;
+	line-height: 1.35;
+	margin: 0;
+}
+
+.nh-news__excerpt {
+	color: #555;
+	margin: 0;
+	font-size: 0.92rem;
+}
+
+.nh-news__date {
+	color: #888;
+	font-size: 0.8rem;
+}
+
+/* Quick action tiles */
+.nh-quick-action {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding-block: 1rem;
+	padding-inline: 1.25rem;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 12px;
+	background: var(--wp--preset--color--base, #fff);
+	text-decoration: none;
+	color: inherit;
+	font-weight: 600;
+	min-height: 64px;
+	transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.nh-quick-action:hover {
+	border-color: currentColor;
+}
+
+.nh-quick-action__icon {
+	width: 28px;
+	height: 28px;
+	flex: 0 0 auto;
+}
+
+/* Directionality: icons and text flow correctly in RTL automatically because
+   flex + logical properties are used; no [dir="rtl"] overrides needed. */

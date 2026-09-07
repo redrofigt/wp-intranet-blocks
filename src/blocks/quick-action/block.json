@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "intranet-blocks/quick-action",
+  "title": "Quick Action Tile",
+  "category": "widgets",
+  "description": "Quick-action tile linking to a service (IT desk, HR portal, room booking). Icon + label, RTL-safe, theme.json aware.",
+  "keywords": [ "quick action", "intranet", "tile" ],
+  "textdomain": "intranet-blocks",
+  "attributes": {
+    "icon": { "type": "string", "default": "calendar" },
+    "label": { "type": "string", "default": "" },
+    "url": { "type": "string", "default": "" },
+    "openInNewTab": { "type": "boolean", "default": false }
+  },
+  "supports": {
+    "html": false,
+    "reusable": true,
+    "spacing": { "padding": true, "margin": true },
+    "color": { "background": true, "text": true },
+    "typography": { "fontSize": true }
+  },
+  "editorScript": "intranet-blocks-editor",
+  "editorStyle": "intranet-blocks-editor-style",
+  "style": "intranet-blocks-style",
+  "render_callback": "IntranetBlocks\\Render\\quick_action"
+}
