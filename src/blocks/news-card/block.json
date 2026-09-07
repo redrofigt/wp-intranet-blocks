@@ -1,51 +1,27 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 3,
-	"name": "intranet-blocks/news-card",
-	"title": "News Card",
-	"category": "widgets",
-	"description": "Responsive news card grid for the intranet homepage and department portals. Server-rendered, RTL-safe.",
-	"keywords": [ "news", "intranet", "cards" ],
-	"textdomain": "intranet-blocks",
-	"attributes": {
-		"layout": {
-			"type": "string",
-			"default": "grid"
-		},
-		"categoryId": {
-			"type": "number",
-			"default": 0
-		},
-		"postCount": {
-			"type": "number",
-			"default": 4
-		},
-		"showExcerpt": {
-			"type": "boolean",
-			"default": true
-		},
-		"showDate": {
-			"type": "boolean",
-			"default": true
-		}
-	},
-	"supports": {
-		"html": false,
-		"align": [ "wide", "full" ],
-		"spacing": {
-			"margin": true,
-			"padding": true
-		},
-		"color": {
-			"background": true,
-			"text": true
-		},
-		"typography": {
-			"fontSize": true
-		}
-	},
-	"editorScript": "intranet-blocks-editor",
-	"editorStyle": "intranet-blocks-editor-style",
-	"style": "intranet-blocks-style",
-	"render_callback": "IntranetBlocks\\Render\\news_card"
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "intranet-blocks/news-card",
+  "title": "News Card",
+  "category": "widgets",
+  "description": "Responsive news card grid for the intranet homepage and department portals. Server-rendered, RTL-safe.",
+  "keywords": [ "news", "intranet", "cards" ],
+  "textdomain": "intranet-blocks",
+  "attributes": {
+    "layout": { "type": "string", "default": "grid" },
+    "categoryId": { "type": "number", "default": 0 },
+    "postCount": { "type": "number", "default": 4 },
+    "showExcerpt": { "type": "boolean", "default": true },
+    "showDate": { "type": "boolean", "default": true }
+  },
+  "supports": {
+    "html": false,
+    "align": [ "wide", "full" ],
+    "spacing": { "margin": true, "padding": true },
+    "color": { "background": true, "text": true },
+    "typography": { "fontSize": true }
+  },
+  "editorScript": "intranet-blocks-editor",
+  "editorStyle": "intranet-blocks-editor-style",
+  "style": "intranet-blocks-style"
 }

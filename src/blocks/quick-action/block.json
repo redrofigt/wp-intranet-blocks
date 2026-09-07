@@ -22,6 +22,5 @@
   },
   "editorScript": "intranet-blocks-editor",
   "editorStyle": "intranet-blocks-editor-style",
-  "style": "intranet-blocks-style",
-  "render_callback": "IntranetBlocks\\Render\\quick_action"
+  "style": "intranet-blocks-style"
 }
