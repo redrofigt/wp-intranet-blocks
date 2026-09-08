@@ -1,11 +1,11 @@
 {
   "name": "wp-intranet-blocks",
   "version": "1.0.0",
-  "description": "Custom React Gutenberg blocks for enterprise intranets: news cards, quick-action tiles, event grids, document accordions — full RTL/Arabic support.",
+  "description": "Custom React Gutenberg blocks for enterprise intranets: news cards, quick-action tiles, event grids, document accordions â€” full RTL/Arabic support.",
   "author": "redrofigt",
   "license": "GPL-2.0-or-later",
   "scripts": {
-    "build": "wp-scripts build",
+    "build": "node build.mjs",
     "start": "wp-scripts start",
     "lint:js": "wp-scripts lint-js",
     "lint:css": "wp-scripts lint-style"
